@@ -12,7 +12,7 @@ export default class PTA_Event_Form4 extends Component {
         console.log(this.props);
         alert(this.props.name);
         this.setState({
-            name: 'Phan Truong Anh'
+            name: this.props.name
         });
     };
 
