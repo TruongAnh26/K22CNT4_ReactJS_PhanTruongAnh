@@ -47,7 +47,7 @@ function App() {
   }
 
   return (
-    <div className="container my-3 border ">
+    <div className="container rounded-1 ">
       <h1 className='text-center'>CRUD by Hook API</h1>
       <PtaStudentList
         listStudent={ptaData}

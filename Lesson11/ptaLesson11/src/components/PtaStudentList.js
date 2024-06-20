@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function PtaStudentList({ listStudent, onClickEdit, onClickDelete}) {
   return (
-    <div className='container m-2'>
-        <table className='table table-bordered text-center rounded-1'>
+    <div>
+        <table className='table border text-center rounded-1'>
             <thead>
                 <tr>
                 <th>MaSV</th>
