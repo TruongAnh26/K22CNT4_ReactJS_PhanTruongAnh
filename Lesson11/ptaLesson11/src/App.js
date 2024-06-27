@@ -5,6 +5,7 @@ import { getDataFromMockApi, ptaCreateStudent, ptaDeleteStudent, ptaGetStudentBy
 import PtaStudentList from './components/PtaStudentList';
 import PtaAddStudent from './components/PtaAddStudent';
 import PtaEditStudent from './components/PtaEditStudent';
+import PtaList from '../../../Lesson12/pta-ontap/src/components/PtaList';
 function App() {
   const [ptaData, setPtaData] = useState([]);
   const [isOpenEdit, setIsOpenEdit] = useState(false);
@@ -47,18 +48,9 @@ function App() {
   }
 
   return (
-    <div className="container rounded-1 ">
-      <h1 className='text-center'>CRUD by Hook API</h1>
-      <PtaStudentList
-        listStudent={ptaData}
-        onClickEdit={ptaOnclickEdit}
-        onClickDelete={deleteStudent}
-        />
-      <PtaAddStudent setNewData = {addNewStudent} />
-      {isOpenEdit && <PtaEditStudent 
-                        ptaStudentInfo = {ptaStudentInfo}
-                        ptaUpdateStudent = {updateStudent}  
-                      />}
+    <div className="container border my-3 ">
+      <h1 className='text-center'>MOCK API</h1>
+      <PtaList renderData = {ptaData} />
     </div>
   );
 }
